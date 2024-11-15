@@ -7,7 +7,7 @@ isMoving := false
 if (0 >= 1) { ; Se houver pelo menos um argumento
     Duration := %1% ; Primeiro argumento em milissegundos
 } else {
-    Duration := 15000 ; Padrão para 2 horas em milissegundos
+    Duration := 900000 ; Padrão para 2 horas em milissegundos
 }
 
 ; Define o caminho para o arquivo de sinalização

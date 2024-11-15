@@ -68,10 +68,11 @@ class TimerApp:
         )
         self.stop_button.grid(row=1, column=2, padx=10, pady=10)
 
+        # Alteração aplicada aqui: 15 minutos em vez de 15 segundos
         self.coffee_button = ctk.CTkButton(
             self.root,
             text="Coffee Break",
-            command=lambda: self.set_preset_timer(0, 0, 15),  # 15 seconds
+            command=lambda: self.set_preset_timer(0, 15, 0),  # 15 minutos
             width=160,
             height=50,
             font=("Helvetica", 20),
@@ -82,7 +83,7 @@ class TimerApp:
         self.lunch_button = ctk.CTkButton(
             self.root,
             text="Lunch Break",
-            command=lambda: self.set_preset_timer(2, 0, 0),  # 2 hours
+            command=lambda: self.set_preset_timer(2, 0, 0),  # 2 horas
             width=250,
             height=50,
             font=("Helvetica", 20),
