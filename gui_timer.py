@@ -111,7 +111,7 @@ class TimerApp:
         self.ahk_process = None  # AutoHotkey process
         self.monitor_thread = None
 
-        self.flag_file_path = r"C:\Users\Mii_Reis\Documents\GitHub\Tempo\mouse_moving.flag"  # Flag file path
+        self.flag_file_path = r"mouse_moving.flag"  # Flag file path
 
         self.flag_detected = threading.Event()
 
@@ -164,7 +164,7 @@ class TimerApp:
 
     def start_ahk(self, duration_ms=7200000):
         """Starts the AutoHotkey script with the specified duration."""
-        ahk_script_path = r"C:\Users\Mii_Reis\Documents\GitHub\Tempo\temp.ahk"
+        ahk_script_path = r"temp.ahk"
         ahk_exe_path = r"C:\Program Files\AutoHotkey\AutoHotkey.exe"
 
         print("Starting AutoHotkey script...")
@@ -193,7 +193,7 @@ class TimerApp:
 
     def update_ahk_script(self, duration_ms):
         """Updates the AHK script with the specified duration."""
-        ahk_script_path = r"C:\Users\Mii_Reis\Documents\GitHub\Tempo\temp.ahk"
+        ahk_script_path = r"temp.ahk"
         if os.path.exists(ahk_script_path):
             with open(ahk_script_path, "r", encoding="utf-8") as file:
                 script_content = file.read()
